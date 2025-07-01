@@ -8,5 +8,9 @@ HandleCalculator handleCalculator = new HandleCalculator();
 
 //string input =  "3 + 5 * 2 - 4 / 2";
 //string input = "1 * 4 * 2 * 2 - 2";
-string input = "10/0";
+string input = "9 - 8";
+
+//Console.WriteLine(handleCalculator.ParseData(input));
+
+
 Console.WriteLine(handleCalculator.EvaluateExpression(input));

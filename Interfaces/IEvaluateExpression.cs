@@ -8,6 +8,6 @@ namespace ProjectCalculator.Interfaces
 {
     public interface IEvaluateExpression
     {
-        public int EvaluateExpression(string input);
+        public string EvaluateExpression(string input);
     }
 }
