@@ -11,14 +11,12 @@ namespace ProjectCalculator
 {
     public class HandleCalculator : IEvaluateExpression
     {
-
-
         /// <summary>
         /// Cette fonction prend en entrée une expression arithmétique et retourne le resultat.
         /// </summary>
         /// <param name="input">Chaîne contenant l'expression arithmétique.</param>
         /// <returns>resultat du calcul.</returns>
-        /// <exception cref="ArgumentNullException">Si <paramref name="input"/> est null.</exception>
+        /// <exception cref="throwException">Si <paramref name="input"/> est null.</exception>
         public string EvaluateExpression(string input)
         {
             //prend en parametre l'expression et retourne le resultat 
@@ -38,6 +36,11 @@ namespace ProjectCalculator
             int a = 0;
             int b = 0;
             int result = 0;
+            if (input == "")
+            {
+                throw new Exception("input cannot be empty");
+            }
+
             foreach (var item in input_parsed)
             {
                 if (int.TryParse(item, NumberStyles.Integer, CultureInfo.InvariantCulture, out int value))
@@ -99,8 +102,7 @@ namespace ProjectCalculator
         /// </summary>
         /// <param name="input">Chaîne à analyser.</param>
         /// <returns>Liste des éléments trouvés.</returns>
-        /// <exception cref="ArgumentNullException">Si <paramref name="input"/> est null.</exception>
-        public  List<string> ParseData(string input)
+        private static List<string> ParseData(string input)
         {
             // cette fonction capture les pattern et les converti en list
             var pattern = @"[+\-]?\d+|[()^*/+\-]";
