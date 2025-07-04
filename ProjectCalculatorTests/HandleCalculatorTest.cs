@@ -95,7 +95,7 @@ namespace ProjectCalculatorTests
 
 
         [DataTestMethod]
-        [DataRow("5 * 2 - 1", "9")]
+        [DataRow("5 * 2 - 1", "9")] // "5 * 2 - 1", expected = "9"
         public void EvaluateExpression_MultiplicationAndPriority_ReturnsExpected(string input, string expected)
         {
 
@@ -107,7 +107,7 @@ namespace ProjectCalculatorTests
         }
 
         [DataTestMethod]
-        [DataRow("3 + 5 * 2 - 4 / 2", "11")]
+        [DataRow("3 + 5 * 2 - 4 / 2", "11")] // "3 + 5 * 2 - 4 / 2", expected = "11"
         public void EvaluateExpression_DivisionnAndPriority_ReturnsExpected(string input, string expected)
         {
 
@@ -120,7 +120,7 @@ namespace ProjectCalculatorTests
 
 
         [DataTestMethod]
-        [DataRow("5*2", "10")]
+        [DataRow("5*2", "10")] // "5*2", expected = "10"
         public void EvaluateExpression_Multiplication_ReturnsExpected(string input, string expected)
         {
 
@@ -133,7 +133,7 @@ namespace ProjectCalculatorTests
 
 
         [DataTestMethod]
-        [DataRow("10/2", "5")]
+        [DataRow("10/2", "5")] // "10/2"", expected = "5"
         public void EvaluateExpression_Division_ReturnsExpected(string input, string expected)
         {
 
