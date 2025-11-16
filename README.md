@@ -32,5 +32,6 @@ Additional operations such as:
 
 Power (x^y)
 
-Square root
+x**y + z
 
+(x/y + z) - u
